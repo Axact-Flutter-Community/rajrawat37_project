@@ -1,16 +1,7 @@
 # session_2
 
-A new Flutter project.
+## App with Assest Image and Network image (single child scroll view in row and a list view for vertical scroll ) and a Gradient App Bar
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ <img src="https://user-images.githubusercontent.com/52829478/93169254-57227680-f742-11ea-87db-df3faa1a8a26.jpeg" alt="Loading" width="350" height="600">
+ <img src="https://user-images.githubusercontent.com/52829478/93169252-5558b300-f742-11ea-8df3-42f67521968f.jpeg" alt="Loading" width="350" height="600">
+ <img src="https://user-images.githubusercontent.com/52829478/93169242-5093ff00-f742-11ea-87ef-fba6474bb717.jpeg" alt="Loading" width="350" height="600">
