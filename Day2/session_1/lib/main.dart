@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Column(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(top: 300),
+                margin: EdgeInsets.only(top: 250),
                 color: Colors.yellow,
                 height: 100,
                 width: 100,
