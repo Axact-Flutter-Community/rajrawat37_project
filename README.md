@@ -9,6 +9,5 @@
  ## Day-2
  
  
-  <img src="https://user-images.githubusercontent.com/52829478/93298855-a4214e00-f811-11ea-9356-ba76a9462bf5.jpeg" alt="Loading" width="350" height="600"> 
-
+  <img src="https://user-images.githubusercontent.com/52829478/93298855-a4214e00-f811-11ea-9356-ba76a9462bf5.jpeg" alt="Loading" width="350" height="600"><img  src="https://user-images.githubusercontent.com/52829478/93316832-536a1f00-f82a-11ea-94d6-b028f9c897ee.jpeg" alt="Loading" width="350" height="600"> 
 
