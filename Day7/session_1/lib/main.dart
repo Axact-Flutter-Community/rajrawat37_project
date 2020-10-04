@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   void initState() {
     super.initState();
-    controller = new TabController(length: 2, vsync: this);
+    controller = new TabController(length: 3, vsync: this);
   }
 
   @override
@@ -48,15 +48,22 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-            title: new Text('Image Stack'),
+            title: new Text('Medbot'),
+            centerTitle: true,
+
             backgroundColor: Colors.red,
+
             bottom: new TabBar(controller: controller, tabs: <Widget>[
               new Tab(
-                text: "Flowers",
+               icon: Icon(Icons.menu),
+               
               ),
               new Tab(
-                text: "Cats",
+                   icon: Icon(Icons.mic),
               ),
+              new Tab(
+                icon: Icon(Icons.notifications),
+              )
             ])),
         body: new TabBarView(
           controller: controller,
