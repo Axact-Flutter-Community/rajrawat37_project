@@ -39,14 +39,15 @@ class _NewsPageState extends State<NewsPage>
       super.dispose();
     }
 
-    double h = MediaQuery.of(context).size.height - kBottomNavigationBarHeight;
     double width = MediaQuery.of(context).size.width;
+
+    double h = MediaQuery.of(context).size.height - kBottomNavigationBarHeight;
 
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          toolbarHeight: 65,
+          toolbarHeight: 55,
           bottom: TabBar(
             unselectedLabelColor: Colors.white,
             labelColor: Colors.amber,
@@ -81,48 +82,49 @@ class _NewsPageState extends State<NewsPage>
                           itemCount: 10,
                           scrollDirection: Axis.vertical,
                           itemBuilder: (context, index) {
-                            return Expanded(
+                            return Flexible(
                                 //color: Colors.white10,
                                 child: Column(
                               children: <Widget>[
-                                Expanded(
-                                  child: Container(
-                                      child: Image.network(
-                                    snapshot.data[index]['urlToImage'],
-                                    fit: BoxFit.cover,
-                                  )),
+                                Container(
+                                    height:
+                                        (h - AppBar().preferredSize.height) / 2,
+                                    child: Image.network(
+                                      snapshot.data[index]['urlToImage'],
+                                      fit: BoxFit.cover,
+                                    )),
+                                Container(
+                                  height:
+                                      (h - AppBar().preferredSize.height) / 8,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text(
+                                      snapshot.data[index]['title'],
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w200,
+                                        fontSize: 17,
+                                      ),
+                                      overflow: TextOverflow.visible,
+                                    ),
+                                  ),
                                 ),
-                                Expanded(
-                                  child: Column(
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 8),
-                                        child: Text(
-                                          snapshot.data[index]['title'],
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w200,
-                                            fontSize: 20,
-                                            letterSpacing: 1,
-                                          ),
-                                        ),
-                                      ),
-                                      Divider(),
-                                      Padding(
-                                        padding: EdgeInsets.all(8),
-                                        child: Text(
-                                          snapshot.data[index]['content'],
-                                          style: GoogleFonts.alef(fontSize: 15),
-                                        ),
-                                      ),
-                                      Divider(),
-                                      InkWell(
-                                        child: Text(
-                                          "Link",
-                                          style: TextStyle(
-                                              color: Colors.blueAccent[400]),
-                                        ),
-                                      ),
-                                    ],
+                                Divider(),
+                                Container(
+                                  height:
+                                      (h - AppBar().preferredSize.height) / 5,
+                                  child: Text(
+                                    snapshot.data[index]['content'].toString(),
+                                    style: GoogleFonts.alef(fontSize: 15),
+                                    overflow: TextOverflow.clip,
+                                  ),
+                                ),
+                                Divider(),
+                                InkWell(
+                                  child: Text(
+                                    "Link",
+                                    style: TextStyle(
+                                        color: Colors.blueAccent[400]),
+                                    overflow: TextOverflow.clip,
                                   ),
                                 ),
                               ],
