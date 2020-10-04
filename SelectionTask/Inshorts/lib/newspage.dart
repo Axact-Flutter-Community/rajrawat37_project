@@ -39,8 +39,6 @@ class _NewsPageState extends State<NewsPage>
       super.dispose();
     }
 
-    double width = MediaQuery.of(context).size.width;
-
     double h = MediaQuery.of(context).size.height - kBottomNavigationBarHeight;
 
     return Scaffold(
@@ -48,15 +46,17 @@ class _NewsPageState extends State<NewsPage>
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           toolbarHeight: 55,
+          backgroundColor: Colors.green,
           bottom: TabBar(
-            unselectedLabelColor: Colors.white,
-            labelColor: Colors.amber,
+            unselectedLabelColor: Colors.black,
+            labelColor: Colors.white,
             tabs: [
-              new Tab(icon: new Icon(Icons.call)),
+              new Tab(icon: new Icon(Icons.home)),
               new Tab(
-                icon: new Icon(Icons.chat),
+                icon: new Icon(Icons.trending_up),
               ),
             ],
+            
             controller: _tabController,
             indicatorColor: Colors.white,
             indicatorSize: TabBarIndicatorSize.tab,
@@ -139,7 +139,12 @@ class _NewsPageState extends State<NewsPage>
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          
           items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_drop_down_circle),
+              title: Text('News'),
+            ),
             BottomNavigationBarItem(
               icon: Icon(Icons.share),
               title: Text('Share'),
@@ -150,8 +155,9 @@ class _NewsPageState extends State<NewsPage>
             ),
           ],
           type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.green,
           iconSize: 25,
-          selectedItemColor: Colors.deepOrange,
+          selectedItemColor: Colors.white,
           unselectedItemColor: Colors.black,
         ));
   }
